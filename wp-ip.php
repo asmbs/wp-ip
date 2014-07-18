@@ -14,7 +14,9 @@
 
 function admin_bar_ip( $wp_admin_bar )
 {
-  global $wp_admin_bar;
+  if ( !current_user_can( 'manage_options' ) )
+    return;
+  
   $wp_admin_bar->add_node( [
     'id'     => 'wp-ip',
     'title'  => sprintf( __( 'Currently located at <b>%s</b>' ), $_SERVER['REMOTE_ADDR'] ),
