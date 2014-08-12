@@ -19,7 +19,7 @@ function admin_bar_ip( $wp_admin_bar )
 
   $wp_admin_bar->add_node( [
     'id'     => 'wp-ip',
-    'title'  => sprintf( __( 'Currently located at <b>%s</b>' ), $_SERVER['REMOTE_ADDR'] ),
+    'title'  => sprintf( __( 'Currently located at <b>%s</b>' ), $_SERVER['SERVER_ADDR'] ),
     'parent' => 'top-secondary'
   ] );
 }
