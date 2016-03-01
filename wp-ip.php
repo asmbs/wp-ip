@@ -1,6 +1,6 @@
 <?php
+
 /**
- * ---------------------------------------------------------------------------------------------
  * Plugin Name: WP IP
  * Plugin URI:  https://github.com/asmbs/wp-ip
  * Version:     1.0.0
@@ -8,21 +8,24 @@
  * Author:      The A-TEAM
  * Author URI:  https://github.com/asmbs
  * License:     MIT
- * License URI: http://opensource.org/licenses/MIT
- * ---------------------------------------------------------------------------------------------
+ * License URI: http://opensource.org/licenses/MIT2
  */
 
-function admin_bar_ip( $wp_admin_bar )
+/**
+ * @param  WP_Admin_Bar  $wp_admin_bar
+ */
+function admin_bar_ip($wp_admin_bar)
 {
-  if ( !current_user_can( 'manage_options' ) )
-    return;
+    if (!current_user_can('manage_options')) {
+        return;
+    }
 
-  $wp_admin_bar->add_node( [
-    'id'     => 'wp-ip',
-    'title'  => sprintf( __( 'Currently located at <b>%s</b>' ), $_SERVER['SERVER_ADDR'] ),
-    'parent' => 'top-secondary'
-  ] );
+    $wp_admin_bar->add_node([
+        'id'     => 'wp-ip',
+        'title'  => sprintf(__('Currently located at <b>%s</b>'), $_SERVER['SERVER_ADDR']),
+        'parent' => 'top-secondary'
+    ]);
 }
 
 // Register the hook
-add_action( 'admin_bar_menu', 'admin_bar_ip', 10 );
+add_action('admin_bar_menu', 'admin_bar_ip', 10);
