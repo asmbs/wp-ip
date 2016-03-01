@@ -1,0 +1,13 @@
+{
+    "name": "asmbs/wp-ip",
+    "description": "See the IP address of your WordPress instance in the admin bar.",
+    "type": "wordpress-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kyle Tucker",
+            "email": "kyleatucker@gmail.com"
+        }
+    ],
+    "require": {}
+}
