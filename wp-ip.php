@@ -3,7 +3,7 @@
 /**
  * Plugin Name: WP IP
  * Plugin URI:  https://github.com/asmbs/wp-ip
- * Version:     1.0.0
+ * Version:     1.1.0
  * Description: See the IP address of your WordPress instance, right in your admin bar (if you're an administrator).
  * Author:      The A-TEAM
  * Author URI:  https://github.com/asmbs
